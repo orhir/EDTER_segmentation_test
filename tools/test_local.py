@@ -123,7 +123,7 @@ def main():
 
     # build the model and load checkpoint
     global_cfg = mmcv.Config.fromfile(args.globalconfig)
-    global_cfg.work_dir = osp.join('./work_dirs', osp.splitext(osp.basename(args.globalconfig))[0])
+    global_cfg.work_dir = osp.join('/storage/orhir/EDTER/work_dirs', osp.splitext(osp.basename(args.globalconfig))[0])
     global_cfg.global_model_path = args.global_checkpoint
     model = build_segmentor_local8x8(cfg.model, train_cfg=cfg.train_cfg, test_cfg=cfg.test_cfg, global_cfg=global_cfg)
 

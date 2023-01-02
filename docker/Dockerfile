@@ -24,12 +24,27 @@ ARG CUDA
 ARG MMCV
 RUN ["/bin/bash", "-c", "pip install --no-cache-dir mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu${CUDA//./}/torch${PYTORCH}/index.html"]
 
+
+WORKDIR /storage/orhir
+
+# # allows ssh to the docker from outside the container
+# RUN sed 's@.*AuthorizedKeysFile.*@AuthorizedKeysFile /storage/orhir/.ssh/authorized_keys@' -i /etc/ssh/sshd_config
+# RUN chmod 0700 /storage/orhir
+
+# allows the docker to access the outside world:
+RUN sed 's@.*IdentityFile.*@IdentityFile /storage/orhir/.ssh/id_ed25519@' -i /etc/ssh/ssh_config
+RUN sed 's@.*StrictHostKeyChecking.*@StrictHostKeyChecking off@' -i /etc/ssh/ssh_config
+
+# do not ask for git password
+RUN sed 's@.*BatchMode.*@BatchMode yes@' -i /etc/ssh/ssh_config
+
+
 # Install Repo
 RUN git clone https://github.com/orhir/EDTER_segmentation_test.git
-WORKDIR /EDTER_segmentation_test/mmsegmentation
+WORKDIR EDTER_segmentation_test/mmsegmentation/
 ENV FORCE_CUDA="1"
 RUN pip install -r requirements.txt
 RUN pip install --no-cache-dir -e .
 
-WORKDIR /EDTER_segmentation_test
-RUN ./tools/dist_train.sh configs/bsds/EDTER_BIMLA_320x320_80k_bsds_bs_4.py 4
+WORKDIR ../
+# RUN ./tools/dist_train.sh configs/bsds/EDTER_BIMLA_320x320_80k_bsds_bs_4.py 2

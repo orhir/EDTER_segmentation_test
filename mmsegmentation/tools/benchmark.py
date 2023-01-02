@@ -39,7 +39,7 @@ def main():
         json_file = osp.join(args.work_dir, f'fps_{timestamp}.json')
     else:
         # use config filename as default work_dir if cfg.work_dir is None
-        work_dir = osp.join('./work_dirs',
+        work_dir = osp.join('/storage/orhir/EDTER/work_dirs',
                             osp.splitext(osp.basename(args.config))[0])
         mmcv.mkdir_or_exist(osp.abspath(work_dir))
         json_file = osp.join(work_dir, f'fps_{timestamp}.json')

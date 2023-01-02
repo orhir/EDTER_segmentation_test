@@ -26,7 +26,7 @@ def parse_args():
     parser.add_argument(
         '--load-from', help='the checkpoint file to load weights from')
     parser.add_argument(
-        '--resume-from', #type=str, default='/...../work_dirs/XXXXXXXX.pth',
+        '--resume-from', #type=str, default='/..../storage/orhir/EDTER/work_dirs/XXXXXXXX.pth',
         help='the checkpoint file to resume from')
     parser.add_argument(
         '--no-validate',
@@ -79,11 +79,11 @@ def main():
         cfg.work_dir = args.work_dir
     elif cfg.get('work_dir', None) is None:
         # use config filename as default work_dir if cfg.work_dir is None
-        cfg.work_dir = osp.join('./work_dirs',
+        cfg.work_dir = osp.join('/storage/orhir/EDTER/work_dirs',
                                 osp.splitext(osp.basename(args.config))[0])
 
     global_cfg = Config.fromfile(args.globalconfig)
-    global_cfg.work_dir = osp.join('./work_dirs',osp.splitext(osp.basename(args.globalconfig))[0])
+    global_cfg.work_dir = osp.join('/storage/orhir/EDTER/work_dirs',osp.splitext(osp.basename(args.globalconfig))[0])
     global_cfg.global_model_path = args.global_model_path
 
     if args.load_from is not None:

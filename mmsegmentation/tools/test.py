@@ -176,7 +176,7 @@ def main():
             json_file = osp.join(args.work_dir,
                                  f'eval_single_scale_{timestamp}.json')
     elif rank == 0:
-        work_dir = osp.join('./work_dirs',
+        work_dir = osp.join('/storage/orhir/EDTER/work_dirs',
                             osp.splitext(osp.basename(args.config))[0])
         mmcv.mkdir_or_exist(osp.abspath(work_dir))
         timestamp = time.strftime('%Y%m%d_%H%M%S', time.localtime())

@@ -1,4 +1,4 @@
-work_dir = '../../work_dirs'
+work_dir = '.././storage/orhir/EDTER/work_dirs'
 metric = 'mIoU'
 
 # specify the log files we would like to collect in `log_items`
