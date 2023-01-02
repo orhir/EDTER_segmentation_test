@@ -34,7 +34,7 @@ default_cfgs = {
     'vit_base_patch16_384': _cfg(
         url='https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-vitjx/jx_vit_base_p16_384-83fb41ba.pth',
         input_size=(3, 384, 384), mean=(0.5, 0.5, 0.5), std=(0.5, 0.5, 0.5), crop_pct=1.0,
-        pretrained_finetune='pretrain/jx_vit_base_p16_384-83fb41ba.pth'),
+        pretrained_finetune='/storage/orhir/EDTER/jx_vit_base_p16_384-83fb41ba.pth'),
     'vit_base_patch32_384': _cfg(
         url='https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-vitjx/jx_vit_base_p32_384-830016f5.pth',
         input_size=(3, 384, 384), mean=(0.5, 0.5, 0.5), std=(0.5, 0.5, 0.5), crop_pct=1.0),
@@ -42,7 +42,7 @@ default_cfgs = {
     'vit_large_patch16_384': _cfg(
         url='https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-vitjx/jx_vit_large_p16_384-b3be5167.pth',
         input_size=(3, 384, 384), mean=(0.5, 0.5, 0.5), std=(0.5, 0.5, 0.5), crop_pct=1.0,
-        pretrained_finetune='pretrain/jx_vit_large_p16_384-b3be5167.pth'),
+        pretrained_finetune='/storage/orhir/EDTER/jx_vit_large_p16_384-b3be5167.pth'),
     'vit_large_patch32_384': _cfg(
         url='https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-vitjx/jx_vit_large_p32_384-9b920ba8.pth',
         input_size=(3, 384, 384), mean=(0.5, 0.5, 0.5), std=(0.5, 0.5, 0.5), crop_pct=1.0),
@@ -55,7 +55,7 @@ default_cfgs = {
     'vit_base_resnet50d_224': _cfg(),
     'deit_base_distilled_path16_384': _cfg(
         input_size=(3, 384, 384), mean=(0.5, 0.5, 0.5), std=(0.5, 0.5, 0.5), crop_pct=1.0,
-        pretrained_finetune='pretrain/deit_base_distilled_patch16_384.pth'
+        pretrained_finetune='/storage/orhir/EDTER/deit_base_distilled_patch16_384.pth'
     )
 }
 

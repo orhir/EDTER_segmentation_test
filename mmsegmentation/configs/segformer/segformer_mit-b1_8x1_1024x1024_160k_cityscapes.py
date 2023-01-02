@@ -1,6 +1,6 @@
 _base_ = ['./segformer_mit-b0_8x1_1024x1024_160k_cityscapes.py']
 
-checkpoint = 'https://download.openmmlab.com/mmsegmentation/v0.5/pretrain/segformer/mit_b1_20220624-02e5a6a1.pth'  # noqa
+checkpoint = 'https://download.openmmlab.com/mmsegmentation/v0.5//storage/orhir/EDTER/segformer/mit_b1_20220624-02e5a6a1.pth'  # noqa
 model = dict(
     backbone=dict(
         init_cfg=dict(type='Pretrained', checkpoint=checkpoint),

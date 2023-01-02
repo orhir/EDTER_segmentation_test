@@ -1,4 +1,4 @@
-checkpoint = 'https://download.openmmlab.com/mmsegmentation/v0.5/pretrain/stdc/stdc1_20220308-5368626c.pth'  # noqa
+checkpoint = 'https://download.openmmlab.com/mmsegmentation/v0.5//storage/orhir/EDTER/stdc/stdc1_20220308-5368626c.pth'  # noqa
 _base_ = './stdc1_512x1024_80k_cityscapes.py'
 model = dict(
     backbone=dict(

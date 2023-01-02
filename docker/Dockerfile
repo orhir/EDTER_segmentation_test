@@ -25,11 +25,11 @@ ARG MMCV
 RUN ["/bin/bash", "-c", "pip install --no-cache-dir mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu${CUDA//./}/torch${PYTORCH}/index.html"]
 
 # Install Repo
-RUN git clone https://github.com/open-mmlab/mmsegmentation.git /mmsegmentation
-WORKDIR /mmsegmentation
+RUN git clone https://github.com/orhir/EDTER_segmentation_test.git
+WORKDIR /EDTER_segmentation_test/mmsegmentation
 ENV FORCE_CUDA="1"
 RUN pip install -r requirements.txt
 RUN pip install --no-cache-dir -e .
 
-RUN git clone https://github.com/open-mmlab/mmsegmentation.git /mmsegmentation
-
+WORKDIR /EDTER_segmentation_test
+RUN ./tools/dist_train.sh configs/bsds/EDTER_BIMLA_320x320_80k_bsds_bs_4.py 4

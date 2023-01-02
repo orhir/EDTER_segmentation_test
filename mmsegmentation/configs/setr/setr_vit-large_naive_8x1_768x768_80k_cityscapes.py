@@ -8,7 +8,7 @@ model = dict(
     backbone=dict(
         drop_rate=0.,
         init_cfg=dict(
-            type='Pretrained', checkpoint='pretrain/vit_large_p16.pth')),
+            type='Pretrained', checkpoint='/storage/orhir/EDTER/vit_large_p16.pth')),
     test_cfg=dict(mode='slide', crop_size=(768, 768), stride=(512, 512)))
 
 optimizer = dict(

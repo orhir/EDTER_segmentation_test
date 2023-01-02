@@ -4,7 +4,7 @@ _base_ = [
     '../_base_/schedules/schedule_160k.py'
 ]
 
-checkpoint = 'https://download.openmmlab.com/mmsegmentation/v0.5/pretrain/twins/alt_gvt_small_20220308-7e1c3695.pth'  # noqa
+checkpoint = 'https://download.openmmlab.com/mmsegmentation/v0.5//storage/orhir/EDTER/twins/alt_gvt_small_20220308-7e1c3695.pth'  # noqa
 
 model = dict(
     backbone=dict(

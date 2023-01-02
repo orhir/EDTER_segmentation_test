@@ -1,6 +1,6 @@
 _base_ = ['./twins_pcpvt-s_fpn_fpnhead_8x4_512x512_80k_ade20k.py']
 
-checkpoint = 'https://download.openmmlab.com/mmsegmentation/v0.5/pretrain/twins/pcpvt_base_20220308-0621964c.pth'  # noqa
+checkpoint = 'https://download.openmmlab.com/mmsegmentation/v0.5//storage/orhir/EDTER/twins/pcpvt_base_20220308-0621964c.pth'  # noqa
 
 model = dict(
     backbone=dict(

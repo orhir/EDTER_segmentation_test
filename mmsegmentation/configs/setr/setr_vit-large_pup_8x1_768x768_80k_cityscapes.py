@@ -10,7 +10,7 @@ model = dict(
     backbone=dict(
         drop_rate=0.,
         init_cfg=dict(
-            type='Pretrained', checkpoint='pretrain/vit_large_p16.pth')),
+            type='Pretrained', checkpoint='/storage/orhir/EDTER/vit_large_p16.pth')),
     auxiliary_head=[
         dict(
             type='SETRUPHead',

@@ -1,6 +1,6 @@
 _base_ = 'knet_s3_upernet_r50-d8_8x2_512x512_adamw_80k_ade20k.py'
 
-checkpoint_file = 'https://download.openmmlab.com/mmsegmentation/v0.5/pretrain/swin/swin_tiny_patch4_window7_224_20220308-f41b89d3.pth'  # noqa
+checkpoint_file = 'https://download.openmmlab.com/mmsegmentation/v0.5//storage/orhir/EDTER/swin/swin_tiny_patch4_window7_224_20220308-f41b89d3.pth'  # noqa
 
 # model settings
 norm_cfg = dict(type='SyncBN', requires_grad=True)

@@ -1,6 +1,6 @@
 _base_ = ['./segformer_mit-b0_512x512_160k_ade20k.py']
 
-checkpoint = 'https://download.openmmlab.com/mmsegmentation/v0.5/pretrain/segformer/mit_b2_20220624-66e8bf70.pth'  # noqa
+checkpoint = 'https://download.openmmlab.com/mmsegmentation/v0.5//storage/orhir/EDTER/segformer/mit_b2_20220624-66e8bf70.pth'  # noqa
 
 # model settings
 model = dict(

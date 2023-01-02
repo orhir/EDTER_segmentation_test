@@ -4,7 +4,7 @@ _base_ = [
     '../_base_/schedules/schedule_160k.py'
 ]
 
-checkpoint = 'https://download.openmmlab.com/mmsegmentation/v0.5/pretrain/segmenter/vit_tiny_p16_384_20220308-cce8c795.pth'  # noqa
+checkpoint = 'https://download.openmmlab.com/mmsegmentation/v0.5//storage/orhir/EDTER/segmenter/vit_tiny_p16_384_20220308-cce8c795.pth'  # noqa
 
 model = dict(
     pretrained=checkpoint,
